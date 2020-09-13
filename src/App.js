@@ -8,6 +8,8 @@ import Portfolio from './components/Portfolio'
 import Prices from './components/Prices'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+//Administration Area
+import Admin from './admin/Admin'
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path='/portfolio' component={Portfolio}/>
         <Route path='/prices' component={Prices}/>
         <Route path='/contact' component={Contact}/>
+        <Route path='/admin' component={Admin}/>
 
         <Footer/>
       </div>
