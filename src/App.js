@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter, Route} from 'react-router-dom'
 
-import Header from './components/Header'
+import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Services from './components/Services'
 import Portfolio from './components/Portfolio'
@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Navbar />
 
         <Route path='/' exact component={Home}/>
         <Route path='/services' component={Services}/>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Rodape = props => {
+const Footer = props => {
     return (
         <footer className='container-fluid text-center'>
             <p>Site criado por <a href='https://github.com/rodrigoadsilva'>Rodrigo da Silva</a><br/>
@@ -9,4 +9,4 @@ const Rodape = props => {
     )
 }
 
-export default Rodape
+export default Footer

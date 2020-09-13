@@ -1,8 +1,11 @@
 import React from 'react'
 
+import Header from './Header'
+
 const Inicio = props => {
     return (
         <div>
+            <Header/>
             <div id='about' className='container-fluid'>
                 <div className='row'>
                     <div className='col-sm-8'>

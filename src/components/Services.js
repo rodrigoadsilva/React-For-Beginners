@@ -1,8 +1,11 @@
 import React from 'react'
 
+import Header from './Header'
+
 const Services = props => {
     return(
         <div>
+            <Header/>
             <div id='services' className='container-fluid text-center'>
                 <h2>SERVICES</h2>
                 <h4>What we offer</h4>

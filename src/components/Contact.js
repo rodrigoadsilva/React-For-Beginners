@@ -1,8 +1,11 @@
 import React from 'react'
 
+import Header from './Header'
+
 const Contact = props => {
     return(
         <div>
+            <Header/>
             <div id='contact' className='container-fluid bg-grey'>
                 <h2 className='text-center'>CONTACT</h2>
                 <div className='row'>
