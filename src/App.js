@@ -17,13 +17,15 @@ function App() {
       <div className="App">
         <Navbar />
 
-        <Route path='/' exact component={Home}/>
-        <Route path='/services' component={Services}/>
-        <Route path='/portfolio' component={Portfolio}/>
-        <Route path='/prices' component={Prices}/>
-        <Route path='/contact' component={Contact}/>
-        <Route path='/admin' component={Admin}/>
-
+        <div className='container'>
+          <Route path='/' exact component={Home}/>
+          <Route path='/services' component={Services}/>
+          <Route path='/portfolio' component={Portfolio}/>
+          <Route path='/prices' component={Prices}/>
+          <Route path='/contact' component={Contact}/>
+          <Route path='/admin' component={Admin}/>
+        </div>
+        
         <Footer/>
       </div>
     </BrowserRouter>

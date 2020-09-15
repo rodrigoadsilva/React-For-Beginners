@@ -6,7 +6,7 @@ See more info on [Do Zero ao React para iniciantes - Udemy](https://www.udemy.co
 
 ### Install
 
-The application has developed using [Node.js](https://nodejs.org/) v12+ and [Yarn](https://yarnpkg.com/) v1.22+, so make sure that have this versions installed.
+This application was developed using [Node.js](https://nodejs.org/) v12+ and [Yarn](https://yarnpkg.com/) v1.22 +, so make sure you have these versions installed.
 
 Install all dependencies and devDependencies and start the server.
 

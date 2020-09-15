@@ -6,11 +6,10 @@ import ItemPortfolio from './ItemPortfolio'
 
 class Portfolio extends Component {
     constructor(props){
-        super(props)
+        super()
 
         this.state = {
             portfolio : {
-
             }
         }
 
@@ -19,6 +18,7 @@ class Portfolio extends Component {
             state: 'portfolio',
             asArray: false
         })
+
     }
     render(){
         return(

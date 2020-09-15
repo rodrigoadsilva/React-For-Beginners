@@ -6,7 +6,7 @@ import AdminPortfolio from './AdminPortfolio'
 
 class Admin extends Component {
     constructor(props){
-        super(props)
+        super()
     }
     render(){
         return(
