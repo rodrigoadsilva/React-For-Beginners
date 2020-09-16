@@ -8,6 +8,7 @@ import Portfolio from './components/Portfolio'
 import Prices from './components/Prices'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Login from './admin/Login'
 //Administration Area
 import Admin from './admin/Admin'
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/prices' component={Prices}/>
           <Route path='/contact' component={Contact}/>
           <Route path='/admin' component={Admin}/>
+          <Route path='/login' component={Login}/>
         </div>
         
         <Footer/>
