@@ -7,25 +7,36 @@ class AdminPortfolio extends Component {
     constructor(props){
         super()
 
+        this.state = {
+            isRegistering: false
+        }
+
         this.registerJob = this.registerJob.bind(this)
     }
 
     registerJob(e){
-        const imageFile = this.image.files[0]
+        const itemPortfolio = {
+            title: this.title.value,
+            descrition: this.descrition.value,
+            image: this.image
+        }
+        this.setState({isRegistering: true})
+        const imageFile = itemPortfolio.image.files[0]
         // eslint-disable-next-line
-        const {name, size, type} = imageFile
+        const {name} = imageFile // Is possible collect size and type from file
         const ref = storage.ref(name)
         ref.put(imageFile).then(
             img => {
                 img.ref.getDownloadURL().then(downloadURL => {
                     const newPortfolio = {
-                        title: this.title.value,
-                        descrition: this.descrition.value,
+                        title: itemPortfolio.title,
+                        descrition: itemPortfolio.descrition,
                         image: downloadURL
                     }
                     config.push('portfolio', {
                         data: newPortfolio
                     })
+                    this.setState({isRegistering: false})
                 })
             }
         )
@@ -34,6 +45,16 @@ class AdminPortfolio extends Component {
     }
 
     render(){
+        if(this.state.isRegistering){
+            return(
+                <div className='container-fluid'>
+                    
+                    <h3 className='text-center'>
+                        <span className="glyphicon glyphicon-refresh"/> Waiting...
+                    </h3>
+                </div>
+            )
+        }
         return (
             <div className='col-sm-9'>
                 <h2>Portfolio</h2>

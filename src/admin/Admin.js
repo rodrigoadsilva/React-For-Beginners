@@ -30,7 +30,10 @@ class Admin extends Component {
         if(this.state.isLogging){
             return(
                 <div className='container-fluid'>
-                    <h3 className='text-center'>Waiting...</h3>
+                    
+                    <h3 className='text-center'>
+                        <span className="glyphicon glyphicon-refresh"/> Waiting...
+                    </h3>
                 </div>
             )
         }

@@ -30,10 +30,11 @@ class Portfolio extends Component {
                     <div className='row text-center'>
 
                         {
-                            Object.keys(this.state.portfolio)
+                                Object.keys(this.state.portfolio)
                                 .map(key => {
                                     return <ItemPortfolio key={key} itemContent={this.state.portfolio[key]}/>
                                 })
+                            
                         }
                         
                     </div>
