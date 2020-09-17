@@ -12,6 +12,7 @@ class AdminPortfolio extends Component {
 
     registerJob(e){
         const imageFile = this.image.files[0]
+        // eslint-disable-next-line
         const {name, size, type} = imageFile
         const ref = storage.ref(name)
         ref.put(imageFile).then(

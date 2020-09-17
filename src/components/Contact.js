@@ -16,19 +16,19 @@ const Contact = props => {
                         <p><span className='glyphicon glyphicon-envelope'></span> myemail@something.com</p>
                     </div>
                     <div className='col-sm-7 '>
-                        <div className='row'>
-                            <div className='col-sm-6 form-group'>
-                                <input className='form-control' id='nameclassNameclassName' nameclassName='nameclassName' placeholder='nameclassName' type='text' required/>
+                        <div className="row">
+                            <div className="col-sm-6 form-group">
+                                <input className="form-control" id="name" name="name" placeholder="Name" type="text" required/>
                             </div>
-                            <div className='col-sm-6 form-group'>
-                                <input className='form-control' id='email' nameclassName='email' placeholder='Email' type='email' required/>
+                            <div className="col-sm-6 form-group">
+                                <input className="form-control" id="email" name="email" placeholder="Email" type="email" required/>
                             </div>
                         </div>
-                        <textarea className='form-control' id='comments' nameclassName='comments' placeholder='Comment' rows='5'></textarea>
+                        <textarea className="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
                         <br/>
-                        <div className='row'>
-                            <div className='col-sm-12 form-group'>
-                            <button className='btn btn-default pull-right' type='submit'>Send</button>
+                        <div className="row">
+                            <div className="col-sm-12 form-group">
+                                <button className="btn btn-default pull-right" type="submit">Send</button>
                             </div>
                         </div>
                     </div>

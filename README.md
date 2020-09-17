@@ -1,18 +1,32 @@
 # Udemy course - Do Zero ao React para iniciantes
 
-React for beginners course files taught by Professor Reginaldo on the Udemy platform.
-
+React for beginners course files taught by Professor Reginaldo on the Udemy platform.<br>
 See more info on [Do Zero ao React para iniciantes - Udemy](https://www.udemy.com/course/xumes-react-criando-site-para-empresa).
+
+This application was developed using [Node.js](https://nodejs.org/) v12+ and [Yarn](https://yarnpkg.com/) v1.22 +, so make sure you have these versions installed.
+The project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ### Install
 
-This application was developed using [Node.js](https://nodejs.org/) v12+ and [Yarn](https://yarnpkg.com/) v1.22 +, so make sure you have these versions installed.
-
-Install all dependencies and devDependencies and start the server.
+Install all dependencies and devDependencies before start the server.
 
 ```sh
-$ yarn install
-$ yarn start
+$ npm install
 ```
+
+### Run server
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+```sh
+$ npm install
+```
+
+# Supported Browsers
+
+By default, the generated project uses the latest version of React.
+
+You can refer [to the React documentation](https://reactjs.org/docs/react-dom.html#browser-support) for more information about supported browsers.
 
 
