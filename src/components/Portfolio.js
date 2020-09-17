@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 
 import config from './../firebase-config'
-import Header from './Header'
 import ItemPortfolio from './ItemPortfolio'
 
 class Portfolio extends Component {
@@ -12,18 +11,17 @@ class Portfolio extends Component {
             portfolio : {
             }
         }
-
+    }
+    componentDidMount(){
         config.syncState('portfolio', {
             context: this,
             state: 'portfolio',
             asArray: false
         })
-
     }
     render(){
         return(
             <div>
-                <Header/>
                 <div id='portfolio' className='container-fluid text-center bg-grey'>
                     <h2>Portfolio</h2>
                     <h4>What we have created</h4>
