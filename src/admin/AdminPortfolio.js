@@ -8,7 +8,8 @@ class AdminPortfolio extends Component {
         super()
 
         this.state = {
-            isRegistering: false
+            isRegistering: false,
+            registeringDefaultImage: false
         }
 
         this.registerJob = this.registerJob.bind(this)
@@ -20,26 +21,43 @@ class AdminPortfolio extends Component {
             descrition: this.descrition.value,
             image: this.image
         }
-        this.setState({isRegistering: true})
-        const imageFile = itemPortfolio.image.files[0]
-        // eslint-disable-next-line
-        const {name} = imageFile // Is possible collect size and type from file
-        const ref = storage.ref(name)
-        ref.put(imageFile).then(
-            img => {
-                img.ref.getDownloadURL().then(downloadURL => {
-                    const newPortfolio = {
-                        title: itemPortfolio.title,
-                        descrition: itemPortfolio.descrition,
-                        image: downloadURL
-                    }
-                    config.push('portfolio', {
-                        data: newPortfolio
-                    })
-                    this.setState({isRegistering: false})
-                })
+        if(itemPortfolio.image.value === ''){
+            this.setState({isRegistering: true, registeringDefaultImage: true})
+            const newPortfolio = {
+                title: itemPortfolio.title,
+                descrition: itemPortfolio.descrition,
+                image: 'https://via.placeholder.com/200x150?text=Image+not+submit'
             }
-        )
+            config.push('portfolio', {
+                data: newPortfolio
+            })
+            setTimeout(function () {
+                this.setState({isRegistering: false})
+              }.bind(this), 2000)
+            
+        }
+        else{
+            this.setState({isRegistering: true, registeringDefaultImage: false})
+            const imageFile = itemPortfolio.image.files[0]
+            // eslint-disable-next-line
+            const {name} = imageFile // Is possible collect size and type from file
+            const imageStorage = storage.ref(name)
+            imageStorage.put(imageFile).then(
+                img => {
+                    img.imageStorage.getDownloadURL().then(downloadURL => {
+                        const newPortfolio = {
+                            title: itemPortfolio.title,
+                            descrition: itemPortfolio.descrition,
+                            image: downloadURL
+                        }
+                        config.push('portfolio', {
+                            data: newPortfolio
+                        })
+                        this.setState({isRegistering: false})
+                    })
+                }
+            )
+        }
 
         e.preventDefault()
     }
@@ -51,6 +69,8 @@ class AdminPortfolio extends Component {
                     
                     <h3 className='text-center'>
                         <span className="glyphicon glyphicon-refresh"/> Waiting...
+                        <br/>
+                        {this.state.registeringDefaultImage && <small className='form-text text-danger text-muted text-center'>Submitting a placeholder as a City picture</small>}
                     </h3>
                 </div>
             )
